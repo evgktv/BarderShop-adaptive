@@ -1,0 +1,174 @@
+.page-footer {
+    margin-top: 30px;
+
+    border-top: 1px solid #353535;
+}
+
+.page-footer__wrapper   {
+    .container();
+    padding-top: 35px;
+}
+
+.page-footer__contacts {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.page-footer__contacts p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 27px;
+    font-weight: 400;
+
+    text-align: center;
+}
+
+.page-footer__contacts a {
+    display: block;
+    padding: 14px 0;
+    margin-bottom: 25px;
+    margin-top: 20px;
+
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 27px;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-align: center;
+
+    border: 1px solid #353535;
+}
+
+.page-footer__contacts-hidden {
+    display: none;
+}
+
+.page-footer__social {
+    .clearfix();
+
+    font-size: 0;
+}
+
+.page-footer__copyright {
+    text-align: center;
+}
+
+.page-footer__copyright span{
+    display: block;
+    margin: 20px 0;
+}
+
+.page-footer__copyright-link {
+    color: #ffffff;
+
+    border: 1px solid #353535;
+}
+
+.page-footer__copyright-link b {
+    font-size: 14px;
+
+    text-transform: none;
+}
+
+.page-footer__social--hidden {
+    display: none;
+}
+
+
+@media @tablet-widths {
+
+    .page-footer__wrapper {
+        .container-fluid();
+
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .page-footer__contacts {
+        display: inline-block;
+        margin: 0;
+        width: 330px;
+
+        vertical-align: top;
+    }
+
+    .page-footer__contacts p {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .page-footer__contacts a {
+        display: inline-block;
+        padding: 0;
+        margin-bottom: 25px;
+        margin-top: 0;
+
+        font-weight: 400;
+        line-height: 40px;
+
+        text-align: left;
+        vertical-align: top;
+
+        border: none;
+    }
+
+    .page-footer__contacts-hidden {
+        display: inline;
+    }
+
+    .page-footer__social {
+        display: block;
+    }
+
+    .page-footer__copyright {
+        position: absolute;
+        right: 0;
+        top: 30px;
+    }
+
+    .page-footer__copyright span{
+        display: block;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+}
+
+
+@media @desktop-widths {
+
+    .page-footer__wrapper {
+         display: flex;
+         flex-wrap: wrap;
+         flex-grow: 1;
+         justify-content: space-between;
+    }
+
+    .page-footer__contacts {
+        margin-right: 0px;
+    }
+
+    .page-footer__social {
+        display: inline-block;
+        padding-right: 55px;
+        width: 300px;
+    }
+
+    .page-footer__social--hidden {
+        display: block;
+        margin-bottom: 12px;
+
+        font-size: 18px;
+
+        text-align: center;
+    }
+
+    .page-footer__copyright {
+            position: relative;
+            top:0;
+        }
+}

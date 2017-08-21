@@ -1,0 +1,189 @@
+.works {
+    position: relative;
+    padding-bottom: 50px;
+    padding-top: 28px;
+
+    color: #000000;
+
+    background-color: #f8f5f2;
+}
+
+.works__wrapper {
+    .container-fluid();
+}
+
+.works__triangle {
+    position: absolute;
+    bottom: -8px;
+}
+
+.works__title {
+    display: block;
+    margin: 0;
+    margin-bottom: 28px;
+
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.works__to-main {
+    display: none;
+}
+
+.works__item {
+    position: relative;
+    margin: 0 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid #826550;
+}
+
+.works__item--work-of-month {
+    position: absolute;
+
+    top: 380px;
+    left: 0;
+
+    width: 0;
+    height: 0;
+    border-width: 30px 20px 30px 150px;
+    border-style: solid;
+    border-color: #826550 transparent #826550 #826550;
+}
+
+.works__item--work-of-month span {
+    position: absolute;
+
+    top:  -12px;
+    left: -140px;
+
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #ffffff;
+
+    text-transform: uppercase;
+}
+
+.works__item-img-wrapper {
+    background-color: #f2e4d9;
+    display: flex;
+    justify-content: center;
+}
+
+.works__item-img {
+    display: block;
+    margin: 0;
+    widht: 280px;
+    height: auto;
+}
+
+.works__item-review {
+    padding: 10px 30px 20px 20px
+}
+
+.works__item-title {
+    margin: 0;
+    margin-bottom: 15px;
+
+    font-size: 26px;
+}
+
+.works__item-review blockquote {
+    margin: 0;
+}
+
+.works__item-parameters-list {border: 1px solid red;
+    font-size: 0;
+}
+
+.works__item-parameter {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    padding-left: 50px;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 700;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    vertical-align: top;
+
+    &:nth-child(2n+1) {
+        margin-right: 35px;
+    }
+}
+
+.works__item-parameter--hair,
+.works__item-parameter--shave,
+.works__item-parameter--mustache {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 45px;
+        height: 21px;
+        left: 0;
+        top: 2px;
+    }
+}
+
+.works__item-parameter--hair::before {
+    background: url(../img/scissors-icon.png) center no-repeat;
+}
+
+.works__item-parameter--shave::before {
+    background: url(../img/beard-icon.png) center no-repeat;
+}
+
+.works__item-parameter--mustache::before {
+    background: url(../img/mustache-icon.png) center no-repeat;
+}
+
+@media @tablet-widths {
+
+    .works__triangle--up {
+        display: block;
+        top: -48px;
+    }
+
+    .works__item-img-wrapper {
+        display: block;
+        width: 270px;
+    }
+
+    .works__item {
+        display: flex;
+        flex-grow: grow;
+        justify-content: space-between;
+    }
+
+    .works__item--left {
+        margin-right: 40px;
+    }
+
+    .works__item--right {
+        display: flex;
+        flex-direction: column;
+        flex-grow: grow;
+        align-content: space-between;
+        padding: 40px 0px 10px 0px;
+
+        border: 1px solid red;
+    }
+
+    .works__item-review {
+        font-size: 20px;
+        line-height: 27px;
+        font-weight: 400;
+    }
+}

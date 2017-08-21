@@ -1,0 +1,32 @@
+.social-link {
+    float: left;
+    width: 103px;
+    height: 103px;
+
+    border: 1px solid #353535;
+
+    &:hover {
+        opacity: 0.3;
+    }
+}
+
+@media @tablet-widths {
+
+    .social-link {
+        .container-fluid();
+        width: 210px;
+    }
+
+    .social-link:last-child {
+        margin-right: 0;
+    }
+}
+
+@media @desktop-widths {
+
+    .social-link {
+            width: 70px;
+            height: 70px;
+            margin-right: 15px;
+        }
+}
