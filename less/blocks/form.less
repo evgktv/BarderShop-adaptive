@@ -1,0 +1,352 @@
+.form {
+  position: relative;
+  padding-bottom: 50px;
+  padding-top: 28px;
+
+  color: #000000;
+
+  background-color: #f8f5f2;
+}
+
+.form__wrapper {
+  .container-fluid();
+}
+
+.form__triangle {
+  position: absolute;
+  bottom: -8px;
+}
+
+.form__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 28px;
+
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form__to-main {
+  display: none;
+}
+
+.form__box,
+.form__text {
+  padding: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+
+  font-size: 22px;
+  line-height: 27px;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  color: #000000;
+  font-style: normal;
+
+  box-sizing: border-box;
+}
+
+.form__text{
+  font-size: 22px;
+  line-height: 27px;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  color: #000000;
+  font-style: normal;
+}
+
+.form__box--father-name {
+  margin-bottom: 50px;
+}
+
+.form__box--email {
+  margin-bottom: 50px;
+}
+
+.form__filter-title{
+  display: block;
+  margin: 37px 15px;
+
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form__filter-model-list {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.form__filter-model-item {
+  position: relative;
+  padding-bottom: 130px;
+  width: 120px;
+  flex-grow: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left:0;
+
+    width: 100%;
+    height: 105px;
+  }
+}
+
+.form__filter-model-item--1.form__filter-model-item::after {
+  background: url("../img/beard-1.png") top no-repeat;
+}
+
+.form__filter-model-item--2.form__filter-model-item::after {
+  background: url("../img/beard-2.png") top no-repeat;
+}
+
+.form__filter-model-item--3.form__filter-model-item::after {
+  background: url("../img/beard-3.png") top no-repeat;
+}
+
+.form__filter-model-item--4.form__filter-model-item::after {
+  background: url("../img/beard-4.png") top no-repeat;
+}
+
+.form__filter-model-item--5.form__filter-model-item::after {
+  background: url("../img/beard-5.png") top no-repeat;
+}
+
+.form__filter-model-item label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+
+  cursor: pointer;
+
+}
+
+.form__radio-custom {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  background-color: #ffffff;
+
+  &:hover {
+    background-color: #f2e4d9;
+  }
+}
+
+.form__filter-model-item input[type="radio"]:checked + .form__radio-custom::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 15px;
+
+  border-radius: 50%;
+
+  background-color: #000000;
+}
+
+.form__filter-model-item input[type="radio"],
+.form__filter-services-item input[type="checkbox"] {
+  display: none;
+}
+
+.form__checkbox-custom {
+  position: relative;
+  width: 37px;
+  height: 37px;
+  margin-right: 30px;
+
+  background-color: #ffffff;
+
+  &:hover {
+    background-color: #f2e4d9;
+  }
+}
+
+.form__filter-services-item input[type="checkbox"]:checked + .form__checkbox-custom::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  top: -18px;
+  left: 9px;
+
+  border-bottom: 3px solid #000000;
+  border-right: 3px solid #000000;
+
+  transform: rotate(45deg);
+
+}
+
+.form__filter-services-list {
+  display: flex;
+
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.form__label {
+  align-self: center;
+}
+
+.form__filter-services-item label{
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+
+  cursor: pointer;
+}
+
+.form__filter-services-item input[type="checkbox"]:checked + .form__checked-custom::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 15px;
+
+  border: 2px solid #000000;
+}
+
+.form__button {
+  width: 100%;
+  margin: 30px 0;
+
+  color: #ffffff;
+  text-align: center;
+
+  background-color: #826550;
+}
+
+@media @tablet-widths {
+
+  .form__title {
+    display: inline-block;
+
+    vertical-align: top;
+
+    text-align: left;
+  }
+
+  .form__to-main {
+    display: block;
+    float: right;
+    width: 160px;
+    margin: 0;
+
+    color: #ffffff;
+
+    background-color: #000000;
+
+    &:hover {
+      background: #222222;
+    }
+  }
+
+  .form_triangle--up {
+    display: block;
+    top: -48px;
+  }
+
+  .form__main {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  }
+
+  .form__filter-title-all {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__filter-title-line {
+    width: 20%;
+    height: 1px;
+    flex-grow:1;
+    align-self: center;
+
+    background-color: #555555;
+  }
+
+  .form__box {
+    margin-bottom: 30px;
+    margin: right:0;
+  }
+
+  .form__box--surname,
+  .form__box--name,
+  .form__box--father-name {
+    width: 160px;
+    margin: 0;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    flex-grow: 1;
+  }
+
+  .form__box--phone,
+  .form__box--email {
+    width: 100%;
+  }
+
+  .form__box--father-name {
+    margin-right: 0;
+  }
+
+  .form__filter-model {
+    width: 100%;
+  }
+
+  .form__filter-services-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .form__filter-services-item {
+    width: 310px;
+  }
+}
+
+@media @desktop-widths {
+
+  .form__box--surname,
+  .form__box--name,
+  .form__box--father-name {
+    width: 300px;
+  }
+
+  .form__box--phone,
+  .form__box--email {
+      flex-grow: 1;
+      width: 45%;
+  }
+
+  .form__box--phone {
+    margin-right: 20px;
+  }
+
+}

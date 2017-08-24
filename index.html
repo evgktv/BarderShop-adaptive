@@ -30,18 +30,18 @@
                     <a>Главная</a>
                 </li>
                 <li class="main-nav__item">
-                    <a href="#news">Наши работы</a>
+                    <a href="portfolio.html">Наши работы</a>
                 </li>
                 <li class="main-nav__item">
-                    <a href="price.html">Записаться</a>
+                    <a href="form.html">Записаться</a>
                 </li>
                 <li class="main-nav__item">
-                    <a href="market.html">Контакты</a>
+                    <a href="#">Контакты</a>
                 </li>
             </ul>
 
             <ul class="main-nav__user-items">
-                <li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
+                <li class="main-nav__user-item"><a class="main-nav__user-login" href="login.html" title="Войти">Вход</a></li>
             </ul>
         </div>
     </nav>
@@ -213,57 +213,41 @@
             <span>
                 Разработано:
             </span>
-            <a class="page-footer__copyright-link btn" href="#">EVGKTV<br> <b>Evgeny Kotlyarov</b></a>
+            <a class="page-footer__copyright-link btn" href="https://github.com/evgktv">EVGKTV<br> <b>Evgeny Kotlyarov</b></a>
         </div>
     </div>
 </footer>
 
-<script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
 
-    navMain.classList.remove('main-nav--nojs');
+<section class="popup-login popup-show">
+    <div class="popup-login__wrapper">
+        <div class="login__header">
+            <h1 class="login__title">Личный кабинет</h1>
+            <p class="login__descr">Введите свои логин и пароль, чтобы войти</p>
+        </div>
 
-    navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-            navMain.classList.remove('main-nav--closed');
-            navMain.classList.add('main-nav--open');
-        } else {
-            navMain.classList.add('main-nav--closed');
-            navMain.classList.remove('main-nav--open');
-        }
-    });
-</script>
+        <form class="login__form" method="post" action="#">
+            <input class="login__box login__box--login" type="text" name="login" placeholder="Логин">
+            <input class="login__box login__box--password " type="password" name="password" placeholder="Пароль">
 
-<!--
+            <div class="login__check-remember">
 
-<div class="modal-login">
-    <button type="button" class="modal-close" title="Закрыть">Закрыть</button>
-    <h2 class="modal-login-title">Личный кабинет</h2>
-    <p>введите пожалуйста свой логин и пароль</p>
-    <form class="login-form" action="#" method="post">
-        <input class="user-icon" type="text" name="login" placeholder="логин">
-        <input class="password-icon" type="password" name="password" placeholder="пароль">
-        <label class="login-checkbox">
-            <input type="checkbox" name="remember">
-            <span class="checkbox-indicator"></span>
-            запомните меня
-        </label>
-        <a class="password-forgot" href="#">Я зыбыл пароль</a>
-        <button class="btn" type="submit">Войти</button>
-    </form>
-</div>
+                <input class="login__check" type="checkbox" name="remember" id="check">
 
-<div class="modal-map">
-    <button type="button" class="modal-close" title="Закрыть">Закрыть</button>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.2574693913969!2d30.311361174643256!3d59.97763971547019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963156286db22b%3A0xbc9e2cb4bc84bdfd!2z0YPQuy4g0JDQutCw0LTQtdC80LjQutCwINCf0LDQstC70L7QstCwLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTk3MDIy!5e0!3m2!1sru!2sru!4v1498092071699" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
+                <label class="login__label" for="check">Запомните меня</label>
+                <a class="login__forgot" href="#">Я забыл пароль!</a>
+            </div>
+            <button class="login__submit btn" type="submit">Войти</button>
+            <button class="login__close btn" type="submit">Закрыть</button>
+        </form>
+    </div>
+</section>
 
-<div class="modal-overlay"></div>
+<div class="overlay"></div>
 
-<script src="js/script.min.js"></script>
 
--->
+
+<script src="js/main.js"></script>
 
 </body>
 </html>

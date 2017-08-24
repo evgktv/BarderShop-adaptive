@@ -1,0 +1,57 @@
+@keyframes popup-login {
+  0%    {transform: translateY(-1000px);  }
+  60%    {transform: translateY(70px);  }
+  90%    {transform: translateY(15px);  }
+  100%    {transform: translateY(0);  }
+}
+
+@keyframes login-error {
+  0%, 100%                      {transform: translateX(0);  }
+  10%, 30%, 50%, 70%, 90%       {transform: translateX(-15px);  }
+  20%, 40%, 60%, 80%            {transform: translateX(15px);  }
+}
+
+.popup__login-animation {
+  animation: popup-login 0.7s;
+}
+
+.popup__login-error {
+  animation: login-error 0.7s;
+}
+
+.popup-login {
+  display: none;
+
+  position: fixed;
+  width: 100%;
+  top: 138px;
+  left: 0;
+  padding: 35px 0;
+  z-index: 10;
+
+  color: #000000;
+
+  background-color: #f8f5f2;
+
+  box-shadow: 0 6px 20px 7px rgba(0, 0, 0, 0.5);
+}
+
+.popup-login__show {
+  display: block;
+}
+
+.popup-login__wrapper {
+  padding: 0 20px;
+}
+
+@media @tablet-widths {
+
+  .popup-login {
+    width: 460px;
+    padding: 80px 60px;
+
+    top: 175px;
+    left: 50%;
+    margin-left: -290px;
+  }
+}
